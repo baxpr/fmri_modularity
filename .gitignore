@@ -1,0 +1,5 @@
+INPUTS
+OUTPUTS
+*.simg
+localdocker.sh
+*~

@@ -1,0 +1,74 @@
+Bootstrap: docker
+From: ubuntu:16.04
+
+%help
+fmri_modularity_3study
+
+FMRI functional connectivity processing - compute modularity from a connectivity
+matrix. Specific to C840 ROI set and FMRI_conncalc_C840_v1 spider.
+
+TO BUILD
+We expect to build from fmri-connectivity/fmri_modularity_3study directory:
+  sudo singularity build sing/fmri_modularity_3study.simg sing/Singularity
+
+TO RUN
+Assuming run from fmri-connectivity/fmri_conncalc_subj/sing directory
+  singularity run --cleanenv -B INPUTS:/INPUTS,OUTPUTS:/OUTPUTS fmri_modularity_3study.simg
+
+INPUTS
+In the bound INPUTS directory:
+
+connmat.txt,FILE,CONNMAT_R_REMOVEGM_NOSCRUB of FMRI_conncalc_C840_v1
+roi.nii.gz,FILE,ROI_LABELS of FMRI_conncalc_C840_v1
+roiinfo.csv,FILE,ROI_INFO of FMRI_conncalc_C840_v1
+project,FILE,Text file with project label
+subject,FILE,Text file with subject label
+session,FILE,Text file with session label
+scan,FILE,Text file with scan label
+
+OUTPUTS
+fmri_modularity.pdf,FILE,PDF
+modularities.csv,FILE,MODULARITY
+connectivity_matrix.csv,FILE,CONN_MAT
+rroi.nii.gz,FILE,ROI_IMAGE
+communities.csv,FILE,COMMUNITY_SPEC
+community_assignments.csv,FILE,COMMUNITY_MODULES
+
+%files
+  # Build from fmri-connectivity/fmri_modularity_3study for this to work 
+  matlab/compiled /code
+
+%labels
+  Name fmri_modularity_3study
+  Maintainer baxter.rogers@vanderbilt.edu
+
+%post
+  apt-get update
+  apt-get install -y wget unzip zip xvfb ghostscript openjdk-8-jre imagemagick
+    
+  # Fix imagemagick policy to allow PDF output. See https://usn.ubuntu.com/3785-1/
+  sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
+    /etc/ImageMagick-6/policy.xml
+
+  # Download the Matlab Compiled Runtime installer, install, clean up
+  mkdir /MCR
+  wget -nv -P/MCR http://ssd.mathworks.com/supportfiles/downloads/R2017a/deployment_files/R2017a/installers/glnxa64/MCR_R2017a_glnxa64_installer.zip
+  unzip /MCR/MCR_R2017a_glnxa64_installer.zip -d /MCR/MCR_R2017a_glnxa64_installer
+  /MCR/MCR_R2017a_glnxa64_installer/install -mode silent -agreeToLicense yes
+  rm -fr /MCR/MCR_R2017a_glnxa64_installer /MCR/MCR_R2017a_glnxa64_installer.zip
+  rmdir /MCR
+
+  # Create input/output directories for binding
+  mkdir /INPUTS && mkdir /OUTPUTS
+
+%environment
+  # Set Matlab library path
+  LD_LIBRARY_PATH=/usr/local/MATLAB/MATLAB_Runtime/v92/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v92/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v92/sys/os/glnxa64:${LD_LIBRARY_PATH}
+  export LD_LIBRARY_PATH
+
+%runscript
+  cd /code && \
+    xvfb-run --server-num=$(($$ + 99)) \
+    --server-args='-screen 0 1600x1200x24 -ac +extension GLX' \
+    sh run_fmri_modularity_3study.sh \
+    /usr/local/MATLAB/MATLAB_Runtime/v92

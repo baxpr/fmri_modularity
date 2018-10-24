@@ -1,0 +1,841 @@
+Label,System,Retain
+1,Dorsal attention,1
+2,Frontoparietal,1
+3,Sensorimotor,1
+4,Frontoparietal,1
+5,Visual,1
+6,Sensorimotor,1
+7,Unknown,1
+8,Sensorimotor,1
+9,Unknown,1
+10,Limbic,1
+11,Ventral attention,1
+12,Unknown,1
+13,Sensorimotor,1
+14,Frontoparietal,1
+15,Dorsal attention,1
+16,Dorsal attention,1
+17,Ventral attention,1
+18,Ventral attention,1
+19,Unknown,1
+20,Unknown,1
+22,Default mode,0
+23,Unknown,1
+24,Unknown,1
+25,Frontoparietal,0
+26,Default mode,1
+27,Sensorimotor,1
+28,Default mode,1
+29,Dorsal attention,1
+30,Ventral attention,1
+31,Unknown,1
+33,Unknown,1
+34,Frontoparietal,0
+35,Unknown,0
+36,Sensorimotor,1
+37,Visual,1
+38,Default mode,1
+39,Default mode,1
+40,Limbic,1
+41,Frontoparietal,1
+42,Visual,1
+43,Unknown,0
+44,Sensorimotor,1
+45,Frontoparietal,1
+46,Default mode,1
+47,Unknown,1
+48,Unknown,1
+49,Default mode,1
+51,Ventral attention,1
+52,Dorsal attention,1
+53,Visual,1
+54,Frontoparietal,1
+55,Sensorimotor,1
+56,Ventral attention,1
+57,Sensorimotor,1
+58,Unknown,0
+59,Visual,1
+60,Default mode,0
+61,Default mode,1
+62,Unknown,1
+63,Frontoparietal,1
+65,Ventral attention,1
+66,Unknown,1
+67,Frontoparietal,1
+68,Default mode,0
+69,Unknown,1
+70,Visual,1
+71,Sensorimotor,1
+72,Unknown,1
+73,Sensorimotor,1
+75,Dorsal attention,1
+76,Default mode,1
+77,Sensorimotor,1
+78,Visual,1
+79,Default mode,1
+80,Unknown,1
+81,Sensorimotor,1
+82,Frontoparietal,1
+83,Default mode,1
+84,Ventral attention,1
+85,Visual,1
+86,Visual,1
+87,Dorsal attention,1
+88,Unknown,1
+89,Dorsal attention,1
+90,Unknown,1
+91,Frontoparietal,1
+92,Dorsal attention,1
+93,Unknown,1
+94,Unknown,1
+95,Default mode,1
+96,Limbic,0
+97,Ventral attention,1
+98,Default mode,1
+99,Unknown,1
+100,Default mode,1
+101,Ventral attention,1
+102,Sensorimotor,1
+103,Sensorimotor,1
+104,Unknown,1
+105,Sensorimotor,1
+106,Default mode,1
+107,Unknown,1
+108,Frontoparietal,0
+109,Sensorimotor,1
+110,Unknown,1
+111,Ventral attention,1
+112,Default mode,1
+113,Default mode,1
+114,Ventral attention,1
+115,Default mode,1
+116,Unknown,1
+117,Visual,1
+118,Dorsal attention,1
+119,Visual,1
+120,Visual,1
+121,Frontoparietal,1
+122,Sensorimotor,1
+123,Default mode,1
+124,Frontoparietal,1
+125,Sensorimotor,1
+126,Dorsal attention,1
+127,Default mode,1
+128,Ventral attention,1
+130,Frontoparietal,1
+131,Limbic,1
+132,Frontoparietal,1
+133,Unknown,1
+134,Unknown,1
+135,Default mode,1
+136,Visual,1
+137,Default mode,1
+138,Dorsal attention,1
+139,Default mode,1
+140,Ventral attention,1
+141,Frontoparietal,0
+142,Unknown,1
+143,Default mode,1
+144,Ventral attention,1
+145,Default mode,1
+146,Visual,1
+147,Dorsal attention,1
+148,Frontoparietal,1
+149,Unknown,1
+150,Ventral attention,1
+151,Unknown,1
+152,Default mode,0
+153,Default mode,1
+154,Sensorimotor,1
+155,Unknown,1
+156,Ventral attention,1
+157,Default mode,1
+158,Unknown,1
+159,Default mode,1
+160,Default mode,1
+161,Visual,1
+162,Default mode,1
+163,Visual,1
+164,Dorsal attention,1
+165,Ventral attention,1
+166,Unknown,1
+167,Limbic,1
+168,Unknown,0
+169,Unknown,1
+170,Dorsal attention,1
+171,Visual,1
+172,Unknown,1
+173,Default mode,1
+174,Default mode,0
+175,Frontoparietal,1
+176,Default mode,0
+177,Unknown,1
+178,Frontoparietal,0
+179,Unknown,1
+180,Ventral attention,1
+181,Sensorimotor,1
+182,Visual,1
+183,Default mode,1
+184,Ventral attention,1
+185,Visual,1
+186,Unknown,1
+188,Default mode,1
+189,Default mode,1
+190,Unknown,0
+191,Ventral attention,1
+192,Visual,1
+193,Default mode,1
+194,Default mode,1
+195,Unknown,1
+196,Unknown,1
+198,Default mode,1
+199,Sensorimotor,1
+200,Default mode,1
+201,Sensorimotor,1
+202,Frontoparietal,1
+203,Frontoparietal,1
+204,Visual,1
+205,Frontoparietal,1
+206,Limbic,0
+207,Frontoparietal,1
+208,Ventral attention,1
+209,Default mode,1
+210,Unknown,1
+211,Visual,1
+212,Dorsal attention,1
+214,Default mode,1
+215,Unknown,1
+216,Frontoparietal,0
+217,Default mode,1
+218,Frontoparietal,0
+219,Default mode,1
+220,Visual,1
+221,Ventral attention,1
+222,Unknown,0
+223,Unknown,0
+224,Visual,1
+225,Limbic,1
+226,Sensorimotor,1
+227,Unknown,1
+228,Sensorimotor,1
+229,Sensorimotor,1
+230,Unknown,1
+231,Default mode,1
+232,Default mode,1
+233,Visual,1
+234,Unknown,1
+235,Ventral attention,1
+236,Default mode,0
+237,Visual,1
+238,Dorsal attention,1
+239,Ventral attention,1
+240,Visual,1
+241,Sensorimotor,1
+242,Default mode,1
+243,Sensorimotor,1
+244,Default mode,1
+245,Unknown,1
+246,Default mode,1
+247,Unknown,1
+248,Sensorimotor,1
+249,Default mode,1
+250,Visual,1
+251,Ventral attention,1
+252,Sensorimotor,1
+253,Unknown,1
+254,Dorsal attention,1
+255,Sensorimotor,1
+256,Unknown,1
+257,Visual,1
+258,Sensorimotor,1
+259,Sensorimotor,1
+260,Unknown,1
+261,Dorsal attention,1
+262,Unknown,1
+263,Visual,1
+264,Default mode,1
+265,Default mode,1
+266,Dorsal attention,1
+267,Ventral attention,1
+268,Dorsal attention,1
+269,Frontoparietal,0
+270,Unknown,1
+271,Sensorimotor,1
+272,Unknown,1
+273,Default mode,1
+274,Frontoparietal,1
+275,Frontoparietal,1
+276,Frontoparietal,1
+277,Default mode,1
+278,Sensorimotor,1
+279,Unknown,1
+280,Unknown,0
+281,Default mode,1
+282,Unknown,1
+283,Default mode,1
+284,Visual,1
+285,Unknown,1
+286,Ventral attention,1
+287,Ventral attention,1
+288,Dorsal attention,1
+289,Unknown,1
+290,Frontoparietal,1
+291,Dorsal attention,1
+292,Visual,1
+293,Limbic,0
+294,Default mode,1
+295,Unknown,1
+296,Sensorimotor,1
+297,Default mode,1
+298,Unknown,1
+299,Unknown,1
+300,Dorsal attention,1
+301,Visual,1
+302,Limbic,1
+303,Dorsal attention,1
+305,Ventral attention,1
+306,Dorsal attention,1
+307,Visual,1
+308,Sensorimotor,1
+309,Default mode,1
+310,Frontoparietal,1
+311,Frontoparietal,1
+312,Limbic,1
+313,Dorsal attention,1
+314,Frontoparietal,1
+315,Default mode,1
+316,Unknown,1
+317,Ventral attention,1
+318,Frontoparietal,1
+319,Unknown,1
+320,Visual,1
+321,Default mode,1
+322,Sensorimotor,1
+323,Dorsal attention,1
+324,Unknown,1
+325,Unknown,1
+326,Unknown,1
+327,Default mode,1
+328,Visual,1
+329,Ventral attention,1
+330,Dorsal attention,1
+331,Unknown,1
+332,Default mode,1
+333,Unknown,1
+334,Unknown,0
+335,Frontoparietal,1
+336,Default mode,1
+337,Unknown,1
+338,Visual,1
+339,Default mode,0
+340,Unknown,1
+341,Frontoparietal,1
+342,Default mode,1
+343,Sensorimotor,1
+344,Ventral attention,1
+345,Default mode,1
+346,Default mode,1
+347,Dorsal attention,1
+348,Visual,1
+349,Default mode,1
+350,Unknown,1
+351,Unknown,1
+352,Default mode,1
+353,Ventral attention,1
+354,Default mode,1
+355,Unknown,1
+356,Default mode,1
+357,Visual,1
+358,Default mode,1
+359,Default mode,0
+360,Unknown,1
+362,Default mode,1
+363,Unknown,1
+364,Ventral attention,1
+365,Default mode,1
+366,Default mode,1
+367,Unknown,1
+368,Visual,1
+369,Sensorimotor,1
+370,Frontoparietal,1
+371,Sensorimotor,1
+372,Limbic,0
+373,Unknown,1
+374,Frontoparietal,1
+375,Dorsal attention,1
+376,Sensorimotor,1
+377,Sensorimotor,1
+378,Limbic,1
+379,Ventral attention,1
+380,Sensorimotor,1
+381,Ventral attention,1
+382,Default mode,1
+383,Visual,1
+384,Default mode,1
+385,Frontoparietal,1
+386,Default mode,0
+387,Sensorimotor,1
+388,Frontoparietal,1
+389,Visual,1
+390,Unknown,1
+391,Visual,1
+392,Frontoparietal,0
+393,Unknown,1
+394,Frontoparietal,1
+395,Unknown,0
+396,Frontoparietal,1
+397,Default mode,1
+398,Default mode,1
+400,Ventral attention,1
+401,Default mode,1
+402,Unknown,1
+403,Default mode,1
+404,Sensorimotor,1
+405,Frontoparietal,1
+406,Default mode,1
+407,Visual,1
+408,Visual,1
+409,Sensorimotor,1
+410,Default mode,1
+411,Unknown,1
+412,Ventral attention,1
+413,Dorsal attention,1
+414,Frontoparietal,1
+415,Frontoparietal,1
+416,Default mode,1
+417,Unknown,1
+418,Limbic,1
+419,Unknown,1
+420,Dorsal attention,1
+421,Dorsal attention,0
+422,Unknown,1
+423,Sensorimotor,1
+424,Frontoparietal,1
+425,Unknown,1
+426,Ventral attention,1
+427,Frontoparietal,0
+428,Ventral attention,1
+429,Dorsal attention,1
+430,Sensorimotor,1
+431,Default mode,1
+432,Sensorimotor,1
+433,Ventral attention,1
+434,Default mode,1
+435,Sensorimotor,1
+436,Dorsal attention,1
+437,Unknown,1
+438,Default mode,1
+439,Default mode,0
+440,Limbic,0
+441,Default mode,1
+442,Visual,1
+443,Default mode,1
+444,Frontoparietal,1
+445,Unknown,1
+446,Visual,1
+447,Default mode,1
+448,Dorsal attention,1
+449,Visual,1
+450,Ventral attention,1
+451,Unknown,1
+452,Default mode,1
+453,Unknown,1
+454,Frontoparietal,1
+455,Visual,1
+456,Sensorimotor,1
+457,Visual,1
+458,Default mode,1
+459,Unknown,1
+460,Frontoparietal,1
+461,Ventral attention,1
+462,Unknown,1
+463,Dorsal attention,1
+464,Sensorimotor,1
+465,Default mode,1
+466,Unknown,1
+467,Frontoparietal,1
+468,Frontoparietal,1
+469,Sensorimotor,1
+470,Frontoparietal,1
+471,Visual,1
+472,Sensorimotor,1
+473,Default mode,1
+474,Dorsal attention,1
+475,Unknown,1
+476,Default mode,1
+477,Unknown,1
+478,Frontoparietal,0
+479,Default mode,1
+480,Visual,1
+481,Dorsal attention,1
+482,Default mode,0
+483,Ventral attention,1
+484,Unknown,1
+485,Sensorimotor,1
+486,Ventral attention,1
+487,Dorsal attention,1
+488,Unknown,1
+489,Ventral attention,1
+490,Default mode,1
+491,Frontoparietal,1
+492,Frontoparietal,1
+493,Limbic,0
+494,Visual,1
+495,Dorsal attention,1
+496,Dorsal attention,1
+497,Default mode,0
+498,Sensorimotor,1
+499,Ventral attention,1
+500,Unknown,1
+501,Limbic,1
+502,Unknown,1
+503,Frontoparietal,1
+504,Default mode,1
+505,Visual,1
+506,Unknown,1
+507,Unknown,1
+508,Sensorimotor,1
+509,Ventral attention,1
+510,Ventral attention,1
+511,Visual,1
+512,Limbic,1
+513,Default mode,1
+514,Sensorimotor,1
+515,Frontoparietal,1
+516,Default mode,1
+517,Sensorimotor,1
+518,Visual,1
+519,Sensorimotor,1
+520,Sensorimotor,1
+521,Unknown,1
+522,Dorsal attention,1
+523,Sensorimotor,1
+524,Unknown,1
+525,Frontoparietal,1
+526,Unknown,1
+527,Default mode,1
+528,Visual,1
+529,Dorsal attention,1
+530,Frontoparietal,1
+531,Unknown,1
+532,Visual,1
+533,Unknown,1
+534,Unknown,1
+535,Frontoparietal,1
+536,Default mode,1
+537,Visual,1
+538,Dorsal attention,1
+539,Visual,1
+540,Frontoparietal,1
+541,Default mode,1
+542,Visual,1
+543,Frontoparietal,1
+544,Dorsal attention,1
+545,Unknown,1
+546,Ventral attention,1
+547,Default mode,1
+548,Unknown,1
+549,Default mode,1
+550,Limbic,0
+551,Unknown,0
+552,Unknown,1
+553,Frontoparietal,1
+554,Limbic,1
+555,Ventral attention,1
+556,Limbic,1
+557,Default mode,1
+558,Frontoparietal,1
+559,Frontoparietal,1
+560,Unknown,1
+561,Visual,1
+562,Visual,1
+563,Default mode,1
+564,Sensorimotor,1
+565,Visual,1
+566,Default mode,1
+567,Sensorimotor,1
+568,Sensorimotor,1
+569,Unknown,1
+570,Dorsal attention,1
+571,Frontoparietal,0
+572,Unknown,1
+573,Default mode,1
+574,Default mode,1
+575,Frontoparietal,1
+576,Visual,1
+577,Sensorimotor,1
+578,Frontoparietal,1
+579,Default mode,1
+580,Visual,1
+582,Visual,1
+583,Unknown,1
+584,Default mode,1
+585,Frontoparietal,1
+586,Visual,1
+587,Default mode,1
+588,Dorsal attention,1
+589,Default mode,1
+590,Sensorimotor,1
+591,Default mode,1
+592,Unknown,1
+593,Limbic,1
+594,Default mode,1
+596,Frontoparietal,1
+597,Sensorimotor,1
+598,Default mode,1
+599,Sensorimotor,1
+600,Visual,1
+601,Unknown,1
+602,Ventral attention,1
+603,Ventral attention,1
+604,Sensorimotor,1
+605,Dorsal attention,1
+606,Limbic,1
+607,Dorsal attention,1
+608,Ventral attention,1
+609,Dorsal attention,1
+610,Unknown,1
+611,Frontoparietal,1
+613,Default mode,1
+614,Default mode,1
+615,Unknown,1
+616,Sensorimotor,1
+617,Frontoparietal,1
+618,Dorsal attention,1
+619,Default mode,1
+620,Visual,1
+621,Sensorimotor,1
+622,Unknown,1
+623,Default mode,1
+625,Ventral attention,1
+626,Ventral attention,1
+627,Default mode,1
+628,Frontoparietal,1
+629,Unknown,1
+631,Visual,1
+634,Default mode,1
+635,Unknown,1
+636,Ventral attention,1
+637,Frontoparietal,1
+638,Visual,1
+639,Dorsal attention,1
+640,Sensorimotor,1
+641,Sensorimotor,1
+642,Unknown,1
+643,Visual,1
+644,Sensorimotor,1
+645,Unknown,1
+646,Frontoparietal,1
+647,Sensorimotor,1
+649,Frontoparietal,1
+650,Unknown,1
+651,Default mode,1
+652,Frontoparietal,1
+653,Ventral attention,1
+654,Frontoparietal,1
+655,Unknown,1
+657,Default mode,0
+659,Limbic,1
+660,Default mode,1
+662,Unknown,1
+663,Default mode,1
+664,Visual,1
+665,Unknown,1
+666,Visual,1
+667,Unknown,0
+668,Default mode,1
+669,Sensorimotor,1
+670,Unknown,1
+671,Default mode,1
+672,Sensorimotor,1
+673,Unknown,1
+674,Dorsal attention,1
+675,Visual,1
+676,Frontoparietal,1
+677,Unknown,1
+679,Default mode,1
+680,Dorsal attention,1
+681,Unknown,1
+682,Unknown,1
+683,Sensorimotor,1
+685,Frontoparietal,1
+686,Default mode,1
+687,Default mode,1
+688,Dorsal attention,1
+689,Ventral attention,1
+690,Sensorimotor,1
+691,Limbic,1
+692,Limbic,1
+693,Visual,1
+695,Limbic,1
+696,Unknown,1
+697,Ventral attention,1
+698,Unknown,1
+700,Default mode,1
+702,Unknown,1
+704,Unknown,1
+705,Visual,1
+706,Dorsal attention,1
+707,Sensorimotor,1
+708,Dorsal attention,1
+710,Frontoparietal,1
+711,Frontoparietal,1
+713,Ventral attention,1
+714,Sensorimotor,1
+715,Unknown,1
+716,Visual,1
+717,Unknown,1
+718,Unknown,1
+719,Default mode,1
+720,Ventral attention,1
+721,Visual,1
+722,Sensorimotor,1
+723,Default mode,1
+724,Unknown,1
+727,Visual,1
+728,Unknown,1
+730,Unknown,1
+731,Unknown,1
+732,Limbic,1
+734,Ventral attention,1
+735,Sensorimotor,1
+736,Sensorimotor,1
+737,Frontoparietal,1
+739,Unknown,1
+740,Dorsal attention,1
+741,Visual,1
+742,Sensorimotor,1
+746,Unknown,1
+748,Default mode,1
+750,Dorsal attention,1
+751,Limbic,1
+752,Unknown,1
+753,Default mode,1
+754,Ventral attention,1
+758,Limbic,0
+761,Dorsal attention,1
+762,Unknown,1
+764,Dorsal attention,1
+765,Ventral attention,1
+767,Sensorimotor,1
+768,Unknown,1
+769,Sensorimotor,1
+770,Default mode,1
+772,Visual,1
+773,Frontoparietal,1
+774,Frontoparietal,1
+775,Dorsal attention,1
+776,Unknown,1
+777,Unknown,1
+778,Default mode,1
+780,Unknown,1
+781,Default mode,1
+782,Dorsal attention,1
+784,Frontoparietal,1
+787,Unknown,1
+790,Unknown,1
+791,Dorsal attention,1
+796,Ventral attention,1
+798,Sensorimotor,1
+799,Sensorimotor,1
+802,Default mode,1
+804,Limbic,1
+805,Default mode,1
+807,Frontoparietal,1
+808,Unknown,1
+809,Unknown,1
+812,Sensorimotor,1
+813,Unknown,1
+814,Default mode,0
+815,Dorsal attention,1
+818,Unknown,1
+819,Unknown,1
+820,Unknown,1
+821,Default mode,1
+822,Default mode,1
+823,Unknown,1
+826,Frontoparietal,1
+827,Default mode,1
+828,Unknown,1
+830,Ventral attention,1
+831,Ventral attention,1
+834,Unknown,1
+835,Unknown,1
+836,Sensorimotor,1
+837,Visual,1
+839,Sensorimotor,1
+841,Dorsal attention,1
+842,Dorsal attention,1
+844,Default mode,1
+848,Limbic,0
+850,Default mode,1
+851,Default mode,1
+852,Frontoparietal,1
+853,Ventral attention,1
+855,Frontoparietal,1
+856,Unknown,1
+860,Default mode,1
+861,Sensorimotor,1
+863,Unknown,1
+864,Visual,1
+865,Frontoparietal,1
+867,Default mode,0
+868,Default mode,1
+871,Frontoparietal,1
+872,Ventral attention,1
+873,Ventral attention,1
+877,Default mode,1
+880,Dorsal attention,1
+881,Visual,1
+884,Default mode,1
+885,Default mode,1
+887,Unknown,1
+889,Default mode,1
+890,Sensorimotor,1
+896,Frontoparietal,1
+897,Visual,1
+898,Unknown,1
+899,Default mode,1
+901,Sensorimotor,1
+902,Sensorimotor,1
+903,Unknown,1
+904,Limbic,0
+905,Dorsal attention,1
+907,Visual,1
+910,Default mode,1
+913,Unknown,1
+914,Dorsal attention,1
+915,Visual,1
+916,Unknown,0
+917,Ventral attention,1
+918,Visual,1
+919,Frontoparietal,1
+920,Dorsal attention,1
+921,Default mode,1
+922,Visual,1
+923,Default mode,1
+924,Unknown,0
+925,Unknown,1
+926,Sensorimotor,1
+927,Unknown,1
+928,Visual,1
+929,Sensorimotor,1
+930,Limbic,1
+931,Sensorimotor,1
+932,Ventral attention,1
+933,Sensorimotor,1
+934,Visual,1
+935,Default mode,1
+937,Sensorimotor,1
+938,Unknown,1
+939,Frontoparietal,1
+940,Unknown,1
+941,Frontoparietal,1
+942,Visual,1
+943,Sensorimotor,1
+945,Ventral attention,1
+946,Unknown,1
+947,Frontoparietal,1
+948,Limbic,1
+949,Default mode,1
+950,Default mode,1
