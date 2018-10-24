@@ -1,0 +1,7 @@
+connmat_txt,FILE,CONNMAT_R_REMOVEGM_NOSCRUB of FMRI_conncalc_C840_v1
+roi_nii_gz,FILE,ROI_LABELS of FMRI_conncalc_C840_v1
+roiinfo_csv,FILE,ROI_INFO of FMRI_conncalc_C840_v1
+project,STRING,Project label
+subject,STRING,Subject label
+session,STRING,Session label
+scan,STRING,Scan label

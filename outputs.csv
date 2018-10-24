@@ -1,0 +1,6 @@
+fmri_modularity.pdf,FILE,PDF
+modularities.csv,FILE,MODULARITY
+connectivity_matrix.csv,FILE,CONN_MAT
+rroi.nii.gz,FILE,ROI_IMAGE
+communities.csv,FILE,COMMUNITY_SPEC
+community_assignments.csv,FILE,COMMUNITY_MODULES
