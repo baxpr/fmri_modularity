@@ -2,44 +2,17 @@ Bootstrap: docker
 From: ubuntu:16.04
 
 %help
-fmri_modularity_3study
+fmri_modularity
 
 FMRI functional connectivity processing - compute modularity from a connectivity
-matrix. Specific to C840 ROI set and FMRI_conncalc_C840_v1 spider.
+matrix.
 
-TO BUILD
-We expect to build from fmri-connectivity/fmri_modularity_3study directory:
-  sudo singularity build sing/fmri_modularity_3study.simg sing/Singularity
-
-TO RUN
-Assuming run from fmri-connectivity/fmri_conncalc_subj/sing directory
-  singularity run --cleanenv -B INPUTS:/INPUTS,OUTPUTS:/OUTPUTS fmri_modularity_3study.simg
-
-INPUTS
-In the bound INPUTS directory:
-
-connmat.txt,FILE,CONNMAT_R_REMOVEGM_NOSCRUB of FMRI_conncalc_C840_v1
-roi.nii.gz,FILE,ROI_LABELS of FMRI_conncalc_C840_v1
-roiinfo.csv,FILE,ROI_INFO of FMRI_conncalc_C840_v1
-project,FILE,Text file with project label
-subject,FILE,Text file with subject label
-session,FILE,Text file with session label
-scan,FILE,Text file with scan label
-
-OUTPUTS
-fmri_modularity.pdf,FILE,PDF
-modularities.csv,FILE,MODULARITY
-connectivity_matrix.csv,FILE,CONN_MAT
-rroi.nii.gz,FILE,ROI_IMAGE
-communities.csv,FILE,COMMUNITY_SPEC
-community_assignments.csv,FILE,COMMUNITY_MODULES
+See the associated YAML for inputs, outputs, and run command.
 
 %files
-  # Build from fmri-connectivity/fmri_modularity_3study for this to work 
-  matlab/compiled /code
+  bin /matlab_bin
 
 %labels
-  Name fmri_modularity_3study
   Maintainer baxter.rogers@vanderbilt.edu
 
 %post
@@ -61,14 +34,19 @@ community_assignments.csv,FILE,COMMUNITY_MODULES
   # Create input/output directories for binding
   mkdir /INPUTS && mkdir /OUTPUTS
 
+  # Singularity-hub doesn't work with github LFS (it gets the pointer info instead 
+  # of the actual file) so we get the compiled matlab executable via direct download
+  rm /matlab_bin/fmri_modularity
+  wget -nv -P /matlab_bin https://github.com/baxpr/fmri_modularity/raw/master/bin/fmri_modularity
+  chmod ugo+rx /matlab_bin/fmri_modularity
+  
 %environment
   # Set Matlab library path
   LD_LIBRARY_PATH=/usr/local/MATLAB/MATLAB_Runtime/v92/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v92/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v92/sys/os/glnxa64:${LD_LIBRARY_PATH}
   export LD_LIBRARY_PATH
 
 %runscript
-  cd /code && \
     xvfb-run --server-num=$(($$ + 99)) \
     --server-args='-screen 0 1600x1200x24 -ac +extension GLX' \
-    sh run_fmri_modularity_3study.sh \
-    /usr/local/MATLAB/MATLAB_Runtime/v92
+    sh /matlab_bin/run_fmri_modularity.sh \
+    /usr/local/MATLAB/MATLAB_Runtime/v92 "$@"
