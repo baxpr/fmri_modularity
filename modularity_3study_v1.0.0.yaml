@@ -10,43 +10,23 @@ inputs:
     container_source: shub://baxpr/fmri_modularity:v1.0.0
     extraflags: ""
   xnat:
-    scans:
-      - name: scan_fmri
-        types: 'Funct-Run1,Resting State,Rest'
-        needs_qc: False
-        resources:
-          - resource: NIFTI
-            fmatch: '*.nii.gz'
-            fcount: 1
-            ftype: FILE
-            fdest: fmri.nii.gz
-            varname: func_file
-
     assessors:
-      - name: assr_magm
-        proctypes: MAGM_Coreg_Normalize_v2
+      - name: assr_conn
+        proctypes: FMRI_conncalc_C840_v1
         needs_qc: False
         resources:
-          - resource: INIT_COREG_MAT
+          - resource: CONNMAT_R_REMOVEGM_NOSCRUB
             ftype: FILE
-            fdest: coreg_mat.txt
-            varname: coregmat_file
-          - resource: FWD_DEF
+            fdest: connmat.txt
+            varname: connmat_file
+          - resource: ROI_LABELS
             ftype: FILE
-            fdest: y_deffwd.nii.gz
-            varname: deffwd_file
-          - resource: COREG_T1
+            fdest: roilabels.nii.gz
+            varname: roi_file
+          - resource: ROI_INFO
             ftype: FILE
-            fdest: ct1.nii.gz
-            varname: ct1_file
-          - resource: W_GRAY
-            ftype: FILE
-            fdest: wgm.nii.gz
-            varname: wgm_file
-          - resource: W_SEG
-            ftype: FILE
-            fdest: wcseg.nii.gz
-            varname: wcseg_file
+            fdest: roiinfo.csv
+            varname: roiinfo_file
 
     attrs:
       - varname: project
@@ -61,129 +41,27 @@ inputs:
       - varname: scan
         object: scan
         attr: ID
-        ref: scan_fmri
+        ref: assr_conn
 
 outputs:
-  - path: fmri_conncalc.pdf
+  - path: fmri_modularity.pdf
     type: FILE
     resource: PDF
-  - path: FD.txt
+  - path: modularities.csv
     type: FILE
-    resource: FD
-  - path: DVARS.txt
+    resource: MODULARITY
+  - path: connectivity_matrix.csv
     type: FILE
-    resource: DVARS
-  - path: badvols.txt
+    resource: CONN_MAT
+  - path: rroi.nii.gz
     type: FILE
-    resource: BADVOLS
-  - path: confounds_keepgm_noscrub.txt
+    resource: ROI_IMAGE
+  - path: communities.csv
     type: FILE
-    resource: CONFOUNDS_KEEPGM_NOSCRUB
-  - path: connectivity_matrix_R_keepgm_noscrub.csv
+    resource: COMMUNITY_SPEC
+  - path: community_assignments.csv
     type: FILE
-    resource: CONNMAT_R_KEEPGM_NOSCRUB
-  - path: filtered_keepgm_noscrub.nii.gz
-    type: FILE
-    resource: FILTERED_KEEPGM_NOSCRUB
-  - path: roi_timeseries_keepgm_noscrub.csv
-    type: FILE
-    resource: ROI_DATA_KEEPGM_NOSCRUB
-  - path: stats_keepgm_noscrub.txt
-    type: FILE
-    resource: STATS_KEEPGM_NOSCRUB
-  - path: Zmap_keepgm_noscrub.nii.gz
-    type: FILE
-    resource: ZMAP_KEEPGM_NOSCRUB
-  - path: sZmap_keepgm_noscrub.nii.gz
-    type: FILE
-    resource: SZMAP_KEEPGM_NOSCRUB
-  - path: confounds_keepgm_scrub.txt
-    type: FILE
-    resource: CONFOUNDS_KEEPGM_SCRUB
-  - path: connectivity_matrix_R_keepgm_scrub.csv
-    type: FILE
-    resource: CONNMAT_R_KEEPGM_SCRUB
-  - path: filtered_keepgm_scrub.nii.gz
-    type: FILE
-    resource: FILTERED_KEEPGM_SCRUB
-  - path: roi_timeseries_keepgm_scrub.csv
-    type: FILE
-    resource: ROI_DATA_KEEPGM_SCRUB
-  - path: stats_keepgm_scrub.txt
-    type: FILE
-    resource: STATS_KEEPGM_SCRUB
-  - path: Zmap_keepgm_scrub.nii.gz
-    type: FILE
-    resource: ZMAP_KEEPGM_SCRUB
-  - path: sZmap_keepgm_scrub.nii.gz
-    type: FILE
-    resource: SZMAP_KEEPGM_SCRUB
-  - path: confounds_removegm_noscrub.txt
-    type: FILE
-    resource: CONFOUNDS_REMOVEGM_NOSCRUB
-  - path: connectivity_matrix_R_removegm_noscrub.csv
-    type: FILE
-    resource: CONNMAT_R_REMOVEGM_NOSCRUB
-  - path: filtered_removegm_noscrub.nii.gz
-    type: FILE
-    resource: FILTERED_REMOVEGM_NOSCRUB
-  - path: roi_timeseries_removegm_noscrub.csv
-    type: FILE
-    resource: ROI_DATA_REMOVEGM_NOSCRUB
-  - path: stats_removegm_noscrub.txt
-    type: FILE
-    resource: STATS_REMOVEGM_NOSCRUB
-  - path: Zmap_removegm_noscrub.nii.gz
-    type: FILE
-    resource: ZMAP_REMOVEGM_NOSCRUB
-  - path: sZmap_removegm_noscrub.nii.gz
-    type: FILE
-    resource: SZMAP_REMOVEGM_NOSCRUB
-  - path: confounds_removegm_scrub.txt
-    type: FILE
-    resource: CONFOUNDS_REMOVEGM_SCRUB
-  - path: connectivity_matrix_R_removegm_scrub.csv
-    type: FILE
-    resource: CONNMAT_R_REMOVEGM_SCRUB
-  - path: filtered_removegm_scrub.nii.gz
-    type: FILE
-    resource: FILTERED_REMOVEGM_SCRUB
-  - path: roi_timeseries_removegm_scrub.csv
-    type: FILE
-    resource: ROI_DATA_REMOVEGM_SCRUB
-  - path: stats_removegm_scrub.txt
-    type: FILE
-    resource: STATS_REMOVEGM_SCRUB
-  - path: Zmap_removegm_scrub.nii.gz
-    type: FILE
-    resource: ZMAP_REMOVEGM_SCRUB
-  - path: sZmap_removegm_scrub.nii.gz
-    type: FILE
-    resource: SZMAP_REMOVEGM_SCRUB
-  - path: wmeanadfunc.nii.gz
-    type: FILE
-    resource: W_FUNC_MEAN
-  - path: wadfunc.nii.gz
-    type: FILE
-    resource: W_FUNC
-  - path: rwroi_labels.nii.gz
-    type: FILE
-    resource: ROI_LABELS
-  - path: rp_adfunc.txt
-    type: FILE
-    resource: REALIGN_PARAMS
-  - path: roi_snr.nii.gz
-    type: FILE
-    resource: ROI_SNR
-  - path: roi_info.csv
-    type: FILE
-    resource: ROI_INFO
-  - path: roi_labels.csv
-    type: FILE
-    resource: ROI_LABEL_INFO
-  - path: params.csv
-    type: FILE
-    resource: PARAMS
+    resource: COMMUNITY_MODULES
 
 command: >-
   singularity
@@ -192,26 +70,19 @@ command: >-
   --bind $OUTDIR:/OUTPUTS
   "{container_path}"
   magick_path /usr/bin
-  param_file "params_JSins.csv"
-  wroi_file "rois_JSins.nii.gz"
-  roi_file ''
-  roiinfo_file "rois_JSins.csv"
-  coregmat_file "{coregmat_file}"
-  deffwd_file "{deffwd_file}"
-  ct1_file "{ct1_file}"
-  wgm_file "{wgm_file}"
-  wcseg_file "{wcseg_file}"
-  func_file "{func_file}"
+  community_file eight_networks_tcorr05_2level_43_0840rois_3study.csv \
+  connmat_file "{connmat_file}" \
+  roiinfo_file "{roinfo_file}" \
+  roi_file "{roi_file}" \
   project "{project}"
   subject "{subject}"
   session "{session}"
   scan "{scan}"
   out_dir /OUTPUTS
 
-
 attrs:
   xsitype: proc:genProcData
-  walltime: '2:00:00'
+  walltime: '1:00:00'
   memory: 8192
   ppn: 1
 jobtemplate: singularity_job_template.txt
