@@ -1,41 +1,41 @@
-function fmri_modularity_3study
+function fmri_modularity(varargin)
 
-% Imagemagick
-magick_path = '/usr/bin';
 
-% Specific community file
-community_file = which('eight_networks_tcorr05_2level_43_0840rois_3study.csv');
+%% Parse inputs
+P = inputParser;
+addOptional(P,'magick_path','/usr/bin');
+addOptional(P,'community_file', ...
+	which('eight_networks_tcorr05_2level_43_0840rois_3study.csv'));
+addOptional(P,'connmat_file','/INPUTS/connmat.csv');
+addOptional(P,'roiinfo_file','/INPUTS/roiinfo.csv');
+addOptional(P,'roi_file','/INPUTS/roi.nii.gz');
+addOptional(P,'project','UNK_PROJ');
+addOptional(P,'subject','UNK_SUBJ');
+addOptional(P,'session','UNK_SESS');
+addOptional(P,'scan','UNK_SCAN');
+addOptional(P,'out_dir','/OUTPUTS');
+parse(P,varargin{:});
 
-% Inputs
-in_path = '/INPUTS';
-connmat_file = fullfile(in_path,'connmat.csv');
-roiinfo_file = fullfile(in_path,'roiinfo.csv');
-roi_file = fullfile(in_path,'roi.nii.gz');
+magick_path = P.Results.magick_path;
+community_file = which(P.Results.community_file);
+connmat_file = P.Results.connmat_file;
+roiinfo_file = P.Results.roiinfo_file;
+roi_file = P.Results.roi_file;
+project = P.Results.project;
+subject = P.Results.subject;
+session = P.Results.session;
+scan = P.Results.scan;
+out_dir = P.Results.out_dir;
 
-fid = fopen([in_path '/project'],'rt');
-project = fscanf(fid,'%s',[1 1]);
-fclose(fid);
-
-fid = fopen([in_path '/subject'],'rt');
-subject = fscanf(fid,'%s',[1 1]);
-fclose(fid);
-
-fid = fopen([in_path '/session'],'rt');
-session = fscanf(fid,'%s',[1 1]);
-fclose(fid);
-
-fid = fopen([in_path '/scan'],'rt');
-scan = fscanf(fid,'%s',[1 1]);
-fclose(fid);
-
-% Output directory
-out_path = '/OUTPUTS';
+fprintf('community_file:   %s\n',community_file);
+fprintf('roi_file:     %s\n',roi_file);
+fprintf('roiinfo_file: %s\n',roiinfo_file);
 
 
 %% Copy some inputs to output location
-copyfile(connmat_file,fullfile(out_path,'connectivity_matrix.csv'));
-copyfile(community_file,fullfile(out_path,'communities.csv'));
-copyfile(roi_file,fullfile(out_path,'rroi.nii.gz'));
+copyfile(connmat_file,fullfile(out_dir,'connectivity_matrix.csv'));
+copyfile(community_file,fullfile(out_dir,'communities.csv'));
+copyfile(roi_file,fullfile(out_dir,'rroi.nii.gz'));
 
 % Now unzip the ROI image so we can use it for the PDF
 system(['gunzip -fk ' roi_file]);
@@ -44,8 +44,8 @@ roi_file = roi_file(1:end-3);
 % And we'll use an atlas for the underlay image. But we need to resample to
 % the ROI file geometry
 atlas_file = [spm('dir') '/canonical/avg152T1.nii'];
-copyfile(atlas_file,out_path);
-atlas_file = fullfile(out_path,'avg152T1.nii');
+copyfile(atlas_file,out_dir);
+atlas_file = fullfile(out_dir,'avg152T1.nii');
 flags = struct( ...
         'mask',true, ...
         'mean',false, ...
@@ -56,7 +56,7 @@ flags = struct( ...
         );
 spm_reslice({roi_file; atlas_file},flags);
 [~,n,e] = fileparts(atlas_file);
-underlay_file = fullfile(out_path,['r' n e]);
+underlay_file = fullfile(out_dir,['r' n e]);
 
 
 %% Compute modularities
@@ -70,7 +70,7 @@ R = table2array(R);
 
 % Make temporary files for make_pdf
 pdf_community_file = community_file;
-pdf_connmat_file = [out_path '/temp_connmat.csv'];
+pdf_connmat_file = [out_dir '/temp_connmat.csv'];
 save(pdf_connmat_file,'R','-ascii');
 
 % We are assuming the community file and the connectivity matrix are for
@@ -145,13 +145,13 @@ for c = 1:size(C,2)-1
 		
 end
 
-writetable(results,fullfile(out_path,'modularities.csv'));
-writetable(resultsM,fullfile(out_path,'community_assignments.csv'));
+writetable(results,fullfile(out_dir,'modularities.csv'));
+writetable(resultsM,fullfile(out_dir,'community_assignments.csv'));
 
 
 %% Generate PDF
 make_pdf( ...
-	out_path, ...
+	out_dir, ...
 	magick_path, ...
 	underlay_file, ...
 	roi_file, ...
@@ -166,13 +166,15 @@ make_pdf( ...
 
 
 %% Clean up
-delete([out_path '/*.png']);
-delete([out_path '/avg152T1.nii']);
-delete([out_path '/ravg152T1.nii']);
-delete([out_path '/temp_connmat.csv']);
+delete([out_dir '/*.png']);
+delete([out_dir '/avg152T1.nii']);
+delete([out_dir '/ravg152T1.nii']);
+delete([out_dir '/temp_connmat.csv']);
 
 
 %% Exit
-exit
+if isdeployed
+	exit
+end
 
 
