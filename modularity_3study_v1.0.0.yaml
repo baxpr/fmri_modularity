@@ -13,6 +13,7 @@ inputs:
 	scans:
       - name: scan_conn
         types: 'Funct-Run1,Resting State,Rest'
+        needs_qc: True
         select: from(assr_conn/scan_fmri)
 
     assessors:
