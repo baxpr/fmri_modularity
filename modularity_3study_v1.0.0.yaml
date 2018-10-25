@@ -14,6 +14,7 @@ inputs:
       - name: scan_conn
         types: 'Funct-Run1,Resting State,Rest'
         select: from(assr_conn/scan_fmri)
+
     assessors:
       - name: assr_conn
         proctypes: FMRI_conncalc_C840_v1
