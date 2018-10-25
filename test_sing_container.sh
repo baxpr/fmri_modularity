@@ -12,5 +12,5 @@ roi_file ../INPUTS/roi.nii.gz \
 project UNK_PROJ \
 subject UNK_SUBJ \
 session UNK_SESS \
-scan UNK_SCAN \
+scan Proj-x-Subj-x-Sess-x-UNK_SCAN-x-Proc \
 out_dir /OUTPUTS
