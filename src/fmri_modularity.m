@@ -16,6 +16,7 @@ addOptional(P,'scan','UNK_SCAN');
 addOptional(P,'out_dir','/OUTPUTS');
 parse(P,varargin{:});
 
+out_dir = P.Results.out_dir;
 magick_path = P.Results.magick_path;
 community_file = which(P.Results.community_file);
 connmat_file = P.Results.connmat_file;
@@ -25,7 +26,13 @@ project = P.Results.project;
 subject = P.Results.subject;
 session = P.Results.session;
 scan = P.Results.scan;
-out_dir = P.Results.out_dir;
+
+% Hack to parse the scan label from an assessor label if we got the latter
+% instead of the former
+if ~isempty(strfind(scan,'-x-'))
+	q = strsplit(scan,'-x-');
+	scan = q{4};
+end
 
 fprintf('community_file:   %s\n',community_file);
 fprintf('roi_file:     %s\n',roi_file);
