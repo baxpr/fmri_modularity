@@ -15,6 +15,11 @@ inputs:
         types: 'Funct-Run1,Resting State,Rest'
         needs_qc: True
         select: from(assr_conn/scan_fmri)
+        resources:
+          - resource: NIFTI
+            ftype: FILE
+            fdest: fmri.nii.gz
+            varname: fmri_file
 
     assessors:
       - name: assr_conn
