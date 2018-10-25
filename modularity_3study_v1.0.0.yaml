@@ -10,7 +10,7 @@ inputs:
     container_source: shub://baxpr/fmri_modularity:v1.0.0
     extraflags: ""
   xnat:
-	scans:
+    scans:
       - name: scan_conn
         types: 'Funct-Run1,Resting State,Rest'
         needs_qc: True
