@@ -40,7 +40,7 @@ inputs:
         attr: label
       - varname: assr_label
         object: assessor
-        attr: FIXME
+        attr: label
         ref: assr_conn
 
 outputs:
