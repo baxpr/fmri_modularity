@@ -8,5 +8,5 @@ roi_file ../INPUTS/roi.nii.gz \
 project UNK_PROJ \
 subject UNK_SUBJ \
 session UNK_SESS \
-scan UNK_SCAN \
+scan Project-x-Subject-x-Session-x-UNK_SCAN-x-Assessor \
 out_dir ../OUTPUTS
