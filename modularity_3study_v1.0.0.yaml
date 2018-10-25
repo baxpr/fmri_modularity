@@ -10,6 +10,10 @@ inputs:
     container_source: shub://baxpr/fmri_modularity:v1.0.0
     extraflags: ""
   xnat:
+	scans:
+      - name: scan_conn
+        types: 'Funct-Run1,Resting State,Rest'
+        select: from(assr_conn/scan_fmri)
     assessors:
       - name: assr_conn
         proctypes: FMRI_conncalc_C840_v1
@@ -41,7 +45,7 @@ inputs:
       - varname: scan
         object: scan
         attr: ID
-        ref: assr_conn
+        ref: scan_conn
 
 outputs:
   - path: fmri_modularity.pdf
