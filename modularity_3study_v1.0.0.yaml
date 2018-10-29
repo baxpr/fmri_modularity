@@ -70,10 +70,10 @@ command: >-
   --bind $OUTDIR:/OUTPUTS
   "{container_path}"
   magick_path /usr/bin
-  community_file eight_networks_tcorr05_2level_43_0840rois_3study.csv \
-  connmat_file /INPUTS/"{connmat_file}" \
-  roiinfo_file /INPUTS/"{roinfo_file}" \
-  roi_file /INPUTS/"{roi_file}" \
+  community_file eight_networks_tcorr05_2level_43_0840rois_3study.csv
+  connmat_file /INPUTS/"{connmat_file}"
+  roiinfo_file /INPUTS/"{roiinfo_file}"
+  roi_file /INPUTS/"{roi_file}"
   project "{project}"
   subject "{subject}"
   session "{session}"
