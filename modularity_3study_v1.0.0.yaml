@@ -30,7 +30,7 @@ inputs:
 
     attrs:
       - varname: project
-        object: session
+        object: assessor
         attr: project
       - varname: subject
         object: session
