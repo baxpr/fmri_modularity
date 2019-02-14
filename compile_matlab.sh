@@ -7,6 +7,9 @@
 # Where to find SPM12
 spm_dir=/opt/spm12
 
+# We may need to add Matlab to the path on the compilation machine
+export PATH=/usr/local/MATLAB/R2017a/bin:${PATH}
+
 # For the compiler to find all SPM dependencies, we need to do some stuff from 
 # spm_make_standalone.m in our SPM installation. This only needs to be done once
 # for a given installation, but it won't make changes if it finds it has already
